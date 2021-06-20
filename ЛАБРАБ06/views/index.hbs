@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FNCS S7 All Stars</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+    <center>
+    <h3>Рейтинг игроков FNCS S7 All Stars</h1>
+    <p><a href="/create">Добавить игрока</a></p>
+    <table>
+        <tr>
+            <th>Редактор</th>
+            <th>Игрок</th>
+            <th>Очки&nbsp;<a href="/sort/POINTS.ASC">▲</a><a href="/sort/POINTS.DESC">▼</a></th>
+            <th>Победы</th>
+            <th>Сред. зн. по убийствам</th>
+            <th>Сред. зн. по выживанию</th>
+            <th>Страна</th>
+        </tr>
+        {{#each FNCSS7}}
+            <tr>
+                <td width=180 class="editor">
+                    <form action="/edit/{{this.id}}" method="GET" style="display:inline;">
+                        <input type="submit" value="Изменить" />
+                    </form>
+                    <form action="/delete/{{this.id}}" method="POST" style="display:inline;">
+                        <input type="submit" value="Удалить" />
+                    </form>
+                </td>
+                <td class="player">{{this.PLAYER}}</td>
+                <td>{{this.POINTS}}</td>
+                <td>{{this.WINS}}</td>
+                <td>{{this.AVG_ELIMS}}</td>
+                <td>{{this.AVG_PLACE}}</td>
+                <td>{{this.COUNTRY}}</td>
+            </tr>
+        {{/each}}
+    </table>
+    </center>
+</body>
+<html>

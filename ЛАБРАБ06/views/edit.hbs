@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Изменение данных игрока</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <style>.field{width:200px;}</style>
+</head>
+<body>
+    <h1>Изменить данные</h1>
+    <form action="/edit" method="POST">
+        <input type="hidden" name="id" value="{{participant.id}}" />
+        
+        <label>Игрок</label><br>
+        <input name="PLAYER" class="field" value="{{participant.PLAYER}}" /><br><br>
+
+        <label>Очки</label><br>
+        <input name="POINTS" class="number" value="{{participant.POINTS}}" /><br><br>
+        
+        <label>Победы</label><br>
+        <input name="WINS" type="number" class="field" value="{{participant.WINS}}" /><br><br>
+
+        <label>Сред. зн. по убийствам</label><br>
+        <input name="AVG_ELIMS" class="field" value="{{participant.AVG_ELIMS}}" /><br><br>
+
+        <label>Сред. зн. по выживанию</label><br>
+        <input name="AVG_PLACE" class="field" value="{{participant.AVG_PLACE}}" /><br><br>
+
+        <label>Страна</label><br>
+        <input name="COUNTRY" class="field" value="{{participant.COUNTRY}}" /><br><br>
+        
+        <input type="submit" value="Сохранить" />
+    </form>
+    <a href="/">На главную</a>
+</body>
+<html>

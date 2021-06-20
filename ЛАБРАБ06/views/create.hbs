@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление нового игрока</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <style>.field{width:200px;}</style>
+</head>
+<body>
+    <h1>Добавить нового игрока</h1>
+    <form method="POST">        
+        <label>Игрок</label><br>
+        <input name="PLAYER" class="field" /><br><br>
+
+        <label>Очки</label><br>
+        <input name="POINTS" class="number" /><br><br>
+        
+        <label>Победы</label><br>
+        <input name="WINS" type="number" class="field" /><br><br>
+
+        <label>Сред. зн. по убийствам</label><br>
+        <input name="AVG_ELIMS" class="field" /><br><br>
+
+        <label>Сред. зн. по выживанию</label><br>
+        <input name="AVG_PLACE" class="field" /><br><br>
+
+        <label>Страна</label><br>
+        <input name="COUNTRY" class="field" /><br><br>
+        
+        <input type="submit" value="Сохранить" />
+    </form>
+    <a href="/">На главную</a>
+</body>
+<html>
